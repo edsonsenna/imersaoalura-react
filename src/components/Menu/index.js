@@ -10,7 +10,7 @@ function Menu() {
             <a href="/">
                 <img className="Logo" src={Logo} alt="Bikeflix Logo"/> 
             </a>
-            <ButtonWithLink className="ButtonLink" href="/">Novo Vídeo</ButtonWithLink>
+            <ButtonWithLink as="a" className="ButtonLink" href="/">Novo Vídeo</ButtonWithLink>
         </nav>
     )
 }
