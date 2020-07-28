@@ -1,50 +1,50 @@
 {
   "categorias": [
     {
-      "titulo": "Front End",
+      "titulo": "Road",
       "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#6BD1FF",
       "link_extra": {
-        "text": "Formação de Front End na Alura",
+        "text": "Destaques das competições de estrada.",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       },
       "videos": [
         {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+          "titulo": "Men Elite Road Race | 2019",
+          "url": "https://www.youtube.com/watch?v=ATq6jMgkOl4"
         },
         {
-          "titulo": "SEO com React",
-          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+          "titulo": "Men’s Elite Road Race Highlights | 2015",
+          "url": "https://www.youtube.com/watch?v=zoCvceSbTn0"
         },
         {
-          "titulo": "Componentização com VanillaJS #AluraMais",
-          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+          "titulo": "Men Elite ITT Highlights | 2019",
+          "url": "https://www.youtube.com/watch?v=2uhK_cRU8-s"
         },
         {
-          "titulo": "Pare de chutar e aprenda a display: inline #01",
-          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+          "titulo": "Women Elite Road Race | 2019",
+          "url": "https://www.youtube.com/watch?v=aujR3KnM6wI"
         },
         {
-          "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-          "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+          "titulo": "UCI Road World Championships – Innsbruck-Tirol (AUT) | ELITE 2018",
+          "url": "https://www.youtube.com/watch?v=tWxcqiTY-78"
         },
         {
-          "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+          "titulo": "UCI Road World Championships – Innsbruck-Tirol (AUT) | JR 2018",
+          "url": "https://www.youtube.com/watch?v=k7yeNiqg-Qs"
         },
         {
-          "titulo": "Novidades do Angular v9",
-          "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+          "titulo": "UCI Women's Cycling WorldTour | 2019",
+          "url": "https://www.youtube.com/watch?v=KQOYCR2-ckk"
         },
         {
-          "titulo": "Base para aprender os frameworks",
-          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+          "titulo": "UCI Women Elite Road race | 2019",
+          "url": "https://www.youtube.com/watch?v=qjXjUqEWNtg"
         }        
       ]
     },
     {
-      "titulo": "Back End",
+      "titulo": "XCO",
       "cor": "#00C86F",
       "link_extra": {
         "text": "Cursos de Back End na Alura",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "titulo": "Data Science e Inteligência Artificial",
+      "titulo": "XCM",
       "cor": "#9cd33b",
       "link_extra": {
         "text": "Cursos de Data Science na Alura",
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "titulo": "Filmes",
+      "titulo": "BMX",
       "cor": "orange",
       "videos": [
         {
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "titulo": "Games",
+      "titulo": "Generic",
       "cor": "red",
       "link_extra": {
         "text": "Formação de Jogos na Alura",
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "titulo": "Aprendendo a aprender tecnologia",
+      "titulo": "Fun",
       "cor": "#6b5be2",
       "link_extra": {
         "text": "Curso sobre aprendizado na Alura",
