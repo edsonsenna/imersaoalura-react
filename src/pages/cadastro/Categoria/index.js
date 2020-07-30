@@ -7,7 +7,7 @@ function CategoryForm() {
         <Scaffold>
             <h1>Cadastro de Categoria</h1>
 
-            <Link to="/create/category">Criar Categoria</Link>
+            <Link to="/">Ir para Home</Link>
         </Scaffold>
     )
 }
