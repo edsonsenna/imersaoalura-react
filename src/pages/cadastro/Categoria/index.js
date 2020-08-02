@@ -33,11 +33,11 @@ function CategoryForm() {
       <h1>Cadastro de Categoria: {formValues.name} </h1>
 
       <form onSubmit={handleSubmitEvent}>
-        <FormField label='Nome:' value={formValues.name} onChange={handleInputChange} />
+        <FormField name='name' label='Nome' value={formValues.name} onChange={handleInputChange} />
 
-        <FormField label='Descrição:' type="textarea" value={formValues.name} onChange={handleInputChange} />
+        <FormField name='description' label='Descrição' type="textarea" value={formValues.description} onChange={handleInputChange} />
 
-        <FormField label='Cor:' type='color' value={formValues.name} onChange={handleInputChange} />
+        <FormField name='color' label='Cor' type='color' value={formValues.color} onChange={handleInputChange} />
 
         <button>Cadastrar</button>
       </form>
