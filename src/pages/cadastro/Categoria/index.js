@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Scaffold from '../../../components/Scaffold';
@@ -28,6 +28,21 @@ function CategoryForm() {
     setValues(initialValues);
   }
 
+  useEffect(() => {
+    console.log('Testing use effect')
+
+    const URL = 'http://localhost:8080/categories';
+  
+    fetch(URL)
+    .then(async (response) => {
+      const parsedResponse = await response.json();
+      setCategories([...categories, ...parsedResponse]);
+    });
+    
+  }, [ 
+
+  ])
+
   return (
     <Scaffold>
       <h1>Cadastro de Categoria: {formValues.name} </h1>
@@ -42,11 +57,19 @@ function CategoryForm() {
         <button>Cadastrar</button>
       </form>
 
+
+      {
+        !categories.length && <div>Loading...</div>
+      }
+
+      
       <ul>
         {categories.map((category, index) => {
           return <li key={`${category.name}${index}`}>{category.name}</li>;
         })}
       </ul>
+        
+      
 
       <Link to='/'>Ir para Home</Link>
     </Scaffold>

@@ -1,0 +1,10 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Road",
+            "description": "A cycle style",
+            "color": "#cdb1ff"
+        }
+    ]
+}
