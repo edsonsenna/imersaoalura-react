@@ -3,52 +3,42 @@ import { Link } from 'react-router-dom';
 
 import Scaffold from '../../../components/Scaffold';
 import FormField from '../../../components/FormField';
+import useForm from '../../../hooks/useForm';
+import config from '../../../config';
+
 
 function CategoryForm() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
-    color: '',
+    color: '#000000',
   };
   const [categories, setCategories] = useState([]);
-  const [formValues, setValues] = useState(initialValues);
 
-  function setValue(key, value) {
-    setValues({ ...formValues, [key]: value });
-  }
-
-  function handleInputChange(event) {
-    const { value } = event.target;
-    setValue(event.target.getAttribute('name'), value);
-  }
+  const { formValues, handleInputChange, clearForm } = useForm(initialValues);
 
   function handleSubmitEvent(event) {
     event.preventDefault();
     setCategories([...categories, formValues]);
-    setValues(initialValues);
+    clearForm();
   }
 
   useEffect(() => {
-    console.log('Testing use effect')
-
-    const URL = 'http://localhost:8080/categories';
   
-    fetch(URL)
+    fetch(config.API_URL + 'categories')
     .then(async (response) => {
       const parsedResponse = await response.json();
-      setCategories([...categories, ...parsedResponse]);
+      setCategories(parsedResponse);
     });
-    
-  }, [ 
 
-  ])
+  }, [])
 
   return (
     <Scaffold>
-      <h1>Cadastro de Categoria: {formValues.name} </h1>
+      <h1>Cadastro de Categoria: {formValues.title} </h1>
 
       <form onSubmit={handleSubmitEvent}>
-        <FormField name='name' label='Nome' value={formValues.name} onChange={handleInputChange} />
+        <FormField name='title' label='Titulo' value={formValues.title} onChange={handleInputChange} />
 
         <FormField name='description' label='Descrição' type="textarea" value={formValues.description} onChange={handleInputChange} />
 
@@ -65,7 +55,7 @@ function CategoryForm() {
       
       <ul>
         {categories.map((category, index) => {
-          return <li key={`${category.name}${index}`}>{category.name}</li>;
+          return <li key={`${category.title}${index}`}>{category.title}</li>;
         })}
       </ul>
         

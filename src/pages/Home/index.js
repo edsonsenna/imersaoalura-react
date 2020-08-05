@@ -1,41 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Menu from '../../components/Menu';
-import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import categoriesRepository from '../../repositories/categories';
+import Scaffold from '../../components/Scaffold';
 
 function Home() {
+  const [initialValues, setInitialValues] = useState([]);
+
+  useEffect(() => {
+    console.log('useEffect');
+    categoriesRepository.getAllWithVideos().then((categoriesWithVideos) => {
+      setInitialValues(categoriesWithVideos);
+    });
+  }, []);
+
   return (
-    <div style={{ background: "#141414" }}>
-    <Menu />
+    <Scaffold paddingAll={0}>
+      {initialValues.length === 0 && <div>Loading...</div>}
 
-    <BannerMain
-      videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-      url={dadosIniciais.categorias[0].videos[0].url}
-      videoDescription={"Assista aos destaques da corrida Men Elite Road Race no UCI Road World Championships 2019 em Yorkshire, Reino Unido."}
-    />
+      {initialValues.map((category, index) => {
 
-    <Carousel
-      ignoreFirstVideo
-      category={dadosIniciais.categorias[0]}
-    />
+        if(index === 0) {
+          return (
+            <div 
+              key={category.id}> 
+              <BannerMain
+                videoTitle={category.videos[0].title}
+                url={category.videos[0].url}
+                videoDescription={
+                  'Assista aos destaques da corrida Men Elite Road Race no UCI Road World Championships 2019 em Yorkshire, Reino Unido.'
+                }
+              />
 
-    <Carousel
-      category={dadosIniciais.categorias[1]}
-    />
+              <Carousel ignoreFirstVideo category={category} />
+            </div>
+          )
+        }
 
-    <Carousel
-      category={dadosIniciais.categorias[2]}
-    />
+        return (
+          <Carousel
+            key={category.id}
+            category={category}
+          />
+        )
 
-    <Carousel
-      category={dadosIniciais.categorias[3]}
-    />
+      })}
 
-    <Footer />
-  </div>
+    </Scaffold>
   );
 }
 

@@ -1,10 +1,66 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "name": "Road",
-            "description": "A cycle style",
-            "color": "#cdb1ff"
-        }
-    ]
+  "categories": [
+    {
+      "id": 1,
+      "title": "Road",
+      "description": "A cycle style",
+      "color": "#cdb1ff"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "title": "Men Elite Road Race | 2019",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=ATq6jMgkOl4"
+    },
+    {
+      "id": 2,
+      "title": "Men’s Elite Road Race Highlights | 2015",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=zoCvceSbTn0"
+    },
+    {
+      "id": 3,
+      "title": "Men Elite ITT Highlights | 2019",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=2uhK_cRU8-s"
+    },
+    {
+      "id": 4,
+      "title": "Women Elite Road Race | 2019",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=aujR3KnM6wI"
+    },
+    {
+      "id": 5,
+      "title": "UCI Road World Championships – Innsbruck-Tirol (AUT) | ELITE 2018",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=tWxcqiTY-78"
+    },
+    {
+      "id": 6,
+      "title": "UCI Road World Championships – Innsbruck-Tirol (AUT) | JR 2018",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=k7yeNiqg-Qs"
+    },
+    {
+      "id": 7,
+      "title": "UCI Women's Cycling WorldTour | 2019",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=KQOYCR2-ckk"
+    },
+    {
+      "id": 8,
+      "title": "UCI Women Elite Road race | 2019",
+      "categoryId": 1,
+      "url": "https://www.youtube.com/watch?v=qjXjUqEWNtg"
+    },
+    {
+      "title": "Default Title",
+      "url": "https://www.youtube.com/watch?v=ATq6jMgkOl4",
+      "categoryId": 1,
+      "id": 9
+    }
+  ]
 }
