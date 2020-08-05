@@ -61,6 +61,12 @@
       "url": "https://www.youtube.com/watch?v=ATq6jMgkOl4",
       "categoryId": 1,
       "id": 9
+    },
+    {
+      "title": "Default Title",
+      "url": "https://www.youtube.com/watch?v=ATq6jMgkOl4",
+      "categoryId": 1,
+      "id": 10
     }
   ]
 }
